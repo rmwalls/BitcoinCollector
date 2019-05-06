@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Bitcoin Collector</title>
+
+    <!-- Added link to the jQuery Library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <!-- Added a link to Bootstrap-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+</head>
+
+<body>
+  <div class="container">
+    <div class="jumbotron">
+      <h1 class="text-center">Bitcoin Collector!</h1>
+
+      <div class> <!-- Here we have our button with id random-button -->
+        <button id="random-button" class="btn btn-primary btn-lg">
+          <h1>?</h1>
+        </button>
+      </div>
+    </div> <!-- close jumbotron -->
+
+<!-- ==================================================================================================== -->  
+
+<!-- Page structure Section -->
+    <div class = "row">
+      <div class = "col-md-6">
+        // instructions
+      </div> <!-- end row -->
+    </div>
+    <div class = "row">
+      <div class = "col-md-3">
+        // number to number to match
+      </div>
+      <div class ="col-md-2">
+        //wins, losses
+      </div> 
+    </div> <!-- end row -->
+    <div class = "row"> <!-- button row -->
+      <div class = "col-md-2">
+        button 1
+      </div>
+      <div class = "col-md-2">
+        button 2
+      </div>
+      <div class = "col-md-2">
+        button 3
+      </div>
+      <div class = "col-md-2">
+        button 4
+      </div>
+    </div> <!-- end button row-->
+    <div class = "row">
+      <div class = "col-md-4">
+        Your Total: 
+      </div>
+    </div> <!-- end row -->
+    <div class = "row">
+      <div class = "col-md-4">
+        Computed number
+      </div>
+    </div> <!-- end row -->
+
+      <!-- Here we have div called "random-number" where our random number will go -->
+      <h1 class="text-center" id="random-number"></h1>
+      <script type="text/javascript">
+        $(document).ready(function () {
+          $("#random-button").on("click", function () {
+            var numToMatch = "";
+
+            // Create a variable which will hold the random number
+            var ranNumber = Math.floor(Math.random() * 12) + 1;
+            console.log(ranNumber);
+
+            // Storing the random number to be matched
+            numToMatch = ranNumber + numToMatch;
+
+            $("#random-number").text(numToMatch);
+
+          });
+        });
+
+      </script>
+
+
+    </div> <!-- end container div -->
+
+</body>
+
+</html>
