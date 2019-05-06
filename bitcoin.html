@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+  
   <head>
     <meta charset="UTF-8">
     <title>Bitcoin Collector</title>
@@ -23,9 +24,8 @@
       </div>
     </div> <!-- close jumbotron -->
 
-<!-- ==================================================================================================== -->  
+<!-- ================== Page structure Section ======================================================== -->  
 
-<!-- Page structure Section -->
     <div class = "row">
       <div class = "col-md-6">
         // instructions
@@ -33,7 +33,7 @@
     </div>
     <div class = "row">
       <div class = "col-md-3">
-        // number to number to match
+        // number to match
       </div>
       <div class ="col-md-2">
         //wins, losses
@@ -41,7 +41,9 @@
     </div> <!-- end row -->
     <div class = "row"> <!-- button row -->
       <div class = "col-md-2">
-        button 1
+          <div class="image-button" id="button-one"> <!-- Here we have our button with id button-one -->
+            <button type = "button"> <img src="assets/images/bitbronze.png"> </button>
+          </div>
       </div>
       <div class = "col-md-2">
         button 2
@@ -71,8 +73,10 @@
           $("#random-button").on("click", function () {
             var numToMatch = "";
 
-            // Create a variable which will hold the random number
-            var ranNumber = Math.floor(Math.random() * 12) + 1;
+            // Create a variable which will hold the random number to be guessed - add min/max 19-120
+            var min=19; 
+            var max=120;  
+            var ranNumber = Math.floor(Math.random() * (+max - +min) + +min); 
             console.log(ranNumber);
 
             // Storing the random number to be matched
@@ -85,6 +89,26 @@
 
       </script>
 
+<!-- Here we have div called "button-one" where our 1st random number will go -->
+<img class="image-button" id="button-one"></h1>
+<script type="text/javascript">
+  $(document).ready(function () {
+    $("#button-one").on("click", function () {
+      var buttonOneNumber = "";
+
+      // Create a variable which will hold the random number for the button
+      var randNumber = Math.floor(Math.random() * 12) + 1;
+      console.log(randNumber);
+
+     
+      var random1 = randNumber + random1 + " hey";
+      console.log(random1);
+
+      
+    });
+  });
+
+</script>
 
     </div> <!-- end container div -->
 
