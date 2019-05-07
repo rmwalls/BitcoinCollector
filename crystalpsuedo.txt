@@ -1,0 +1,33 @@
+psuedocode
+
+*initial page load*
+<body onload="startGame();"></body>
+Display page with a numbertoMatch generated and displayed
+wins=0;
+losses=0;
+yourScore=0;
+
+bitcoin images should each have a value that will be added to total when clicked.
+
+*Game play*
+Game should be ready to 
+when bitcoin clicked, add value to total
+compare total to the numbertoMatch 
+If it is < than numbertoMatch, wait for next number
+If it equals or exceeds numbertoMatch reset game
+bitcoins retain random values generated until reset
+
+When number = or > numbertoMatch:
+determine win or lose 
+increment appropriate number
+display You won or You lost
+reset game
+
+*Reset game*
+New random numbertoMatch
+New random values for crystals
+yourScore=0;
+
+
+
+
