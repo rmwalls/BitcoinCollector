@@ -3,17 +3,12 @@
     <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <!-- Link to the jQuery Library -->
-    <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+	  <!-- Added link to the jQuery Library -->
+	  <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
 
-    <!-- Link to Bootstrap-->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-  
-    <!-- javascript -->
-    <script type="text/javascript"></script>
-    <script src="assets/javascript/game.js"></script>
-
-     <title>Bitcoin Collector</title>
+    <!-- Added a link to Bootstrap-->
+   	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <title>Bitcoin Collector</title>
   </head>
 
   <body onload="startGame();">
@@ -21,7 +16,9 @@
     
       <div class="jumbotron" style="background-color:peru;">
         <h1 class="text-center">Bitcoin Collector!</h1>
-      </div> <!-- close jumbotron -->  
+      </div> <!-- close jumbotron -->
+
+        <!-- ================== Page structure Section ======================================================== -->  
 
       <div class = "row"> <!-- Instructions -->
         <div class = "col-md-6 text-success font-weight-bold" style="background-color:peachpuff">
@@ -38,13 +35,13 @@
 	        <h1 class="text-center" id="random-number"></h1>
         </div>
         <div class ="col-md-2 bg-info">
-            <p class="font-weight-bold" id="outcome-text"></p>
+          <div>
             <p class="font-weight-bold" id="wins-text"></p>
             <p class="font-weight-bold" id="losses-text"></p>
-          
+          </div>
         </div> 
       </div> <!-- end row -->
-      <div class = "row"> <!-- start button row -->
+      <div class = "row"> <!-- button row -->
         <div class = "col-md-2">
           <div class="image-button" id="button-one"> <!-- button with id button-one -->
             <input type="image" id="button-one" alt="First Button" src="assets/images/bitbronze.png">
@@ -77,7 +74,61 @@
         </div>
       </div> <!-- end row -->
 
-     
+      <!-- ================== Functions Section ======================================================== -->  
+	  <script>
+      function startGame() {
+        var wins=0;
+        var losses=0;
+        var yourScore=0;
+        var winsText = document.getElementById("wins-text");
+        winsText.textContent = "Wins: " + wins;
+        var lossesText = document.getElementById("losses-text"); 
+        lossesText.textContent = "Losses: " + losses;
+      }
+    </script>
+
+      <!-- "random-number" div where our number to be matched will be calculated -->
+      <div id="random-number">
+        <script type="text/javascript">
+          $(function() {		
+            var numToMatch = Math.floor(Math.random() * (120 - 19) + 19); 
+            console.log(numToMatch + " is the match number");
+	        $("#random-number").text(numToMatch);
+          });
+      	</script>
+	    </div> <!-- end random-number -->
+      
+
+	    <script>
+        //Generate random number for each bitcoin
+        var bit1= Math.floor(Math.random()*12+1);
+        console.log("#1 is " + bit1);
+        var bit2= Math.floor(Math.random()*12+1);
+        console.log("#2 is " + bit2);
+        var bit3= Math.floor(Math.random()*12+1);
+        console.log("#3 is " + bit3);
+        var bit4= Math.floor(Math.random()*12+1);
+        console.log("#4 is " + bit4);
+      </script>
+      
+      <script>
+       function playGame() {
+        $("#button-one").on("click", function (bit1){
+        yourScore = bit1 + yourScore;
+        console.log(yourScore);
+
+        if (yourScore === numToMatch) {
+          alert("you win");
+          wins++
+          resetGame();
+          } else if (yourScore > numToMatch) {
+            alert("loser");
+            losses++
+            resetGame();
+          } else {
+            alert("update score");
+        }});
+      </script>
     </div> <!-- end container div -->
 
 	<!-- sticky footer code -->
