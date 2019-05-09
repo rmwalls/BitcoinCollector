@@ -29,5 +29,9 @@ New random values for crystals
 yourScore=0;
 
 
+var yourScore = 0;
+on click capture value of button clicked and add to yourScore and display yourScore
 
-
+if yourScore != numbertoMatch 
+    wait for next click
+    
