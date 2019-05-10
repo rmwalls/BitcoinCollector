@@ -7,7 +7,7 @@
     <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
 
     <!-- Link to Bootstrap-->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   
     <!-- javascript -->
     <script type="text/javascript"></script>
@@ -18,10 +18,14 @@
 
   <body onload="startGame();">
     <div class="container max-width">
-    
+
+    <div class = "row">
+      <div class = "col-md-12">
       <div class="jumbotron" style="background-color:peru;">
         <h1 class="text-center">Bitcoin Collector!</h1>
       </div> <!-- close jumbotron -->  
+    </div> <!-- close col -->
+  </div> <!-- close row -->
 
       <div class = "row"> <!-- Instructions -->
         <div class = "col-md-6 text-success font-weight-bold" style="background-color:peachpuff">
@@ -41,7 +45,6 @@
             <p class="font-weight-bold" id="outcome-text"></p>
             <p class="font-weight-bold" id="wins-text"></p>
             <p class="font-weight-bold" id="losses-text"></p>
-          
         </div> 
       </div> <!-- end row -->
       <div class = "row"> <!-- start button row -->
@@ -73,7 +76,7 @@
       </div> <!-- end row -->
       <div class = "row">
         <div class = "col-md-4 bg-primary">
-        Computed number
+          <h1 class="text-center" id="calculated-score"></h1>
         </div>
       </div> <!-- end row -->
 
