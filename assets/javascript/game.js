@@ -1,4 +1,4 @@
-function startGame() {
+function startGame() { //sets up the page and variables
 var wins=0;
   var losses=0;
   var yourScore=0;
@@ -27,7 +27,8 @@ var wins=0;
   var bit4= Math.floor(Math.random()*12+1);
   console.log("#4 is " + bit4); 
 	
-	 
+  // when button is clicked the button value is added to the score & displayed on the page
+  // then the didIWin function is called 
   $("#button-one").on("click", function(){
   yourScore = yourScore + bit1;
   $("#calculated-score").text(yourScore);
@@ -56,6 +57,7 @@ var wins=0;
   didIWin();
   })
 
+  // this function retains wins/losses but starts a new game
   function resetGame(){
     numToMatch = Math.floor(Math.random() * (120 - 19) + 19); 
     console.log(numToMatch + " is the new match number");
@@ -70,20 +72,21 @@ var wins=0;
       bit4= Math.floor(Math.random()*12+1);
       console.log("#4 is " + bit4); 
     yourScore = 0;
+    $("#calculated-score").text(yourScore);
     outcome = "are playing!";
-    outcomeText.textContent = "You " + outcome;
   }
 
+    // this function compares the current score to the random number to determine win/no win
   function didIWin(){
     if (yourScore === numToMatch) {
     outcome = "won!"
     outcomeText.textContent = "You " + outcome; 
-    prompt("You won. Play again!");
+    alert("You won. Play again!");
     wins++;
     winsText.textContent = "Wins: " + wins;
     resetGame();
     } else if (yourScore > numToMatch) {
-    outcome = "lost";
+    outcome = "lost :(";
     outcomeText.textContent = "You " + outcome;
     alert("Sorry! You lost. Try again")
     losses++
@@ -91,5 +94,4 @@ var wins=0;
     resetGame();
     } else {
     console.log("keep going");
-    
-          }}}
+  }}}
