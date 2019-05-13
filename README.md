@@ -8,6 +8,6 @@ The Bitcoin Collector game generates a random number that you must match by clic
 
 As long as your score remains below the random number, you keep playing. If you go above the random number, you lose. When you match the number, you WIN!
 
-Good luck and have fun!
+Good luck and have fun! https://rmwalls.github.io/unit-4-game/
 
 HTML, Bootstrap, Javascript and JQuery were used to create this game.
