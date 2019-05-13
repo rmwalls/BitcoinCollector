@@ -1,5 +1,5 @@
 # unit-4-game
-JQuery-based Game
+JQuery-based Game: 
 The assignment was to create a Crystal Collector Game. I didn't like the crystals so much and so chose a more timely Bitcoin Collector (bitcoins currently valued at $7K). I also thought the layout of the assignment was awful. So I deliberately did not match it exactly. 
 
 Years ago I was self-employed as a "computer consultant" and called my "company" Aardvark Computer Consulting. At that time, people still used the Yellow Pages, which were organized alphabetically. "Aardvark" gave me an advantage. At any rate, I may use that again. So I added a favicon of an aardvark. Made me happy!
