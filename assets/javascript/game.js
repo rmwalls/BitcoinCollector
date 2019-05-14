@@ -1,5 +1,5 @@
 function startGame() { //sets up the page and variables
-var wins=0;
+  var wins=0;
   var losses=0;
   var yourScore=0;
   var outcome="are Playing!";
