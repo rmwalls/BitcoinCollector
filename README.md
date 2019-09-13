@@ -1,4 +1,4 @@
-# unit-4-game
+# Bitcoin Collector
 JQuery-based Game: 
 The assignment was to create a Crystal Collector Game. I didn't like the crystals so much and so chose a more timely Bitcoin Collector (bitcoins currently valued at $7K). I also thought the layout of the assignment was awful. So I deliberately did not match it exactly. 
 
